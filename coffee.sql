@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2020 at 12:17 PM
+-- Generation Time: Apr 18, 2020 at 01:02 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -35,6 +35,15 @@ CREATE TABLE `customers` (
   `CustomerType` enum('Member','VIP','Other') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `CustomerTelNo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`CustomerID`, `CustomerName`, `Gender`, `CustomerType`, `CustomerTelNo`) VALUES
+(150001, 'Super-Valentine', 'F', 'VIP', '099-999-9999'),
+(155002, 'Jill', 'F', 'Member', '098-888-8888'),
+(155003, 'Calos', 'M', 'Other', '089-666-5999');
 
 -- --------------------------------------------------------
 
@@ -157,7 +166,7 @@ ALTER TABLE `staffs`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155004;
 
 --
 -- AUTO_INCREMENT for table `products`
