@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2020 at 12:08 PM
+-- Generation Time: Apr 18, 2020 at 12:17 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -111,7 +111,8 @@ CREATE TABLE `staffs` (
 INSERT INTO `staffs` (`StaffID`, `StaffCode`, `StaffName`, `Gender`, `StaffPassword`, `StaffLevel`) VALUES
 (147001, 'AF001', 'Topkung', 'M', 'a0123456789', 'Admin'),
 (147002, 'AF002', 'Bacon', 'M', '1120', 'Manager'),
-(147003, 'AF003', 'Coath', 'M', '123456789', 'Staff');
+(147003, 'AF003', 'Coath', 'M', '123456789', 'Staff'),
+(147004, 'AF004', 'TTC', 'M', '357', 'Staff');
 
 --
 -- Indexes for dumped tables
@@ -180,7 +181,7 @@ ALTER TABLE `sale_details`
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147004;
+  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147005;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
