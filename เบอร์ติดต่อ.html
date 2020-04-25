@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>เบอร์ติดต่อ</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:url(https://i.pinimg.com/originals/c0/c4/9e/c0c49e4e644b14188f1c406543af3bf6.jpg)
+            }
+            .nav ul{
+                list-style: none;
+                background-color: #444;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+            }
+            .nav li{
+                font-size: 1.2em;
+                line-height: 40px;
+                text-align: left;
+            }
+            .nav a{
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                padding-left: 15px;
+                border-bottom: 1px solid #888;
+                transition: .3s;
+            }
+            .nav a:hover{
+                background-color: #005f5f;
+            }
+            .nav a.active{
+                background-color: #aaa;
+                color: #444;
+                cursor: default;
+            }
+            .nav li li{
+                font-size: .8em;
+            }
+
+            /* จอ windows*/
+            @media screen and (min-width: 650px){
+                .nav li {
+                    width: 130px;
+                    border-bottom: none;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.4em;
+                    display: inline-block;
+                    margin-right: -4px;
+                }
+                nav a{
+                    border-bottom: none;
+                }
+                .nav > ul > li {
+                    text-align: center;
+                }
+                .nav >ul >li > a {
+                    padding-left: 0;
+                }
+                /*sub menu*/
+                .nav li ul {
+                    position: absolute;
+                    display: none;
+                    width: inherit;
+                }
+                .nav li:hover ul {
+                    display: block;
+                }
+                .nav li ul li {
+                    display: block;
+                }
+            }
+            #กรอบ{
+                border-radius: 25px;
+                padding: 10px;
+                width: 500px;
+                height: 200px;
+                background: white;
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li class="logo"><a href="#">Coffee</a></li>
+                    <li class="item"><a href="หน้าหลัก.html">หน้าหลัก</a></li>
+                    <li class="item"><a href="จองคิว.html">จองคิว</a></li>
+                    <li class="item"><a href="ข้อมูลกาแฟ.html">ข้อมูลกาแฟ</a></li>
+                    <li class="item"><a href="#">ติดต่อ</a>
+                        <ul>
+                            <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
+                            <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
+                        </ul>
+                    </li>
+                    <li class="item button"><a href="เข้าสู่ระบบ.html">เข้าสู่ระบบ</a></li>
+                    <li class="item button secondary"><a href="สมัครสมาชิก.html">สมัคร</a></li>
+                </ul>
+            </div>
+        </header>     
+    </body>
+</html>
