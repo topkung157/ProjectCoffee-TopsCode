@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ProjectCoffe</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:url(https://i.pinimg.com/originals/c0/c4/9e/c0c49e4e644b14188f1c406543af3bf6.jpg)
+            }
+            .nav ul{
+                list-style: none;
+                background-color: #444;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+            }
+            .nav li{
+                font-size: 1.2em;
+                line-height: 40px;
+                text-align: left;
+            }
+            .nav a{
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                padding-left: 15px;
+                border-bottom: 1px solid #888;
+                transition: .3s;
+            }
+            .nav a:hover{
+                background-color: #005f5f;
+            }
+            .nav a.active{
+                background-color: #aaa;
+                color: #444;
+                cursor: default;
+            }
+            .nav li li{
+                font-size: .8em;
+            }
+
+            /* จอ windows*/
+            @media screen and (min-width: 650px){
+                .nav li {
+                    width: 130px;
+                    border-bottom: none;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.4em;
+                    display: inline-block;
+                    margin-right: -4px;
+                }
+                nav a{
+                    border-bottom: none;
+                }
+                .nav > ul > li {
+                    text-align: center;
+                }
+                .nav >ul >li > a {
+                    padding-left: 0;
+                }
+                /*sub menu*/
+                .nav li ul {
+                    position: absolute;
+                    display: none;
+                    width: inherit;
+                }
+                .nav li:hover ul {
+                    display: block;
+                }
+                .nav li ul li {
+                    display: block;
+                }
+            }
+            #กรอบ{
+                border-radius: 25px;
+                padding: 10px;
+                width: 500px;
+                height: 200px;
+                background: white;
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li class="logo"><a href="#">Coffee</a></li>
+                    <li class="item"><a href="#">หน้าหลัก</a></li>
+                    <li class="item"><a href="#">คิวจอง</a></li>
+                    <li class="item"><a href="#">ข้อมูลกาแฟ</a></li>
+                    <li class="item"><a href="#">ติดต่อ</a>
+                        <ul>
+                            <li><a href="#">เพจ</a></li>
+                            <li><a href="#">เบอร์ติดต่อ</a></li>
+                        </ul>
+                    </li>
+                    <li class="item button"><a href="#">เข้าสู่ระบบ</a></li>
+                    <li class="item button secondary"><a href="#">สมัคร</a></li>
+                </ul>
+            </div>
+        </header>
+        <center>
+            <h1><span style="color: blue;">Coffee Shop Thailand</span></h1>
+            <h3>ข้อมูลกาแฟที่มีในร้าน</h3>
+            <h4>1.Espresso</h4>
+            <img src="https://www.nespresso.com/ncp/res/uploads/recipes/nespresso-recipes-Espresso-Macchiato-by-Nespresso.jpg" height="300px" width="300px"><br>
+            <p id="กรอบ"><span style="color:black;">รายละเอียด
+            ประกอบไปด้วย กาแฟล้วน ที่ไม่มีส่วนผสมของนมใดๆ ทั้งสิ้น<br>
+            ถูกชงโดยใช้แรงอัดไอน้ำหรือน้ำร้อนผ่านเมล็ดกาแฟคั่วที่บดละเอียด<br> 
+            ที่มาของชื่อ เอสเปรสโซ “espresso” มาจากคำภาษาอิตาลี แปลว่า เร่งด่วน<br> 
+            กาแฟที่รสชาติเข้มที่สุด เป็นตัวตั้งต้นในการชงกาแฟสูตรอื่นๆ<br> 
+            ซึ่งถือเป็นส่วนผสมสำคัญเลยก็ว่าได้ เป็นกาแฟที่นิยมมากที่สุดในแถบประเทศยุโรปตอนใต้<br>
+            โดยเฉพาะประเทศอิตาลี คอกาแฟตัวจริงมักจะดื่มโดยไม่ปรุงน้ำตาลหรือนมเพิ่มเติม<br> 
+            ทำให้ได้สัมผัสรสชาติของกาแฟอย่างเเท้จริง<br>
+            </span></p>
+            <video controls="" autoplay="" name="media">
+            <source src="http://stream.pjcdn.com:9000/SuksonRadio" type="audio/mpeg">
+            </video>
+        </center>
+    </body>
+</html>
