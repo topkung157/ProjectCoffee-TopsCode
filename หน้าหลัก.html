@@ -4,7 +4,7 @@
         <title>หน้าหลัก</title>
         <style>
             body{
-            background-attachment:fixed;
+                background-attachment:fixed;
             }
             body{
                 margin: 0;
@@ -83,6 +83,16 @@
                 height: 100px;
                 background: white;
             }
+            #right{
+                text-align: right;
+            }
+            .zzzimg{
+	            position: absolute;
+	            z-index: 2;
+	            width: 281px;
+	            top: 345px;
+	            left: 6px;
+            }
         </style>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -93,7 +103,7 @@
                 <ul>
                     <li class="logo"><a href="#">Coffee</a></li>
                     <li class="item"><a href="หน้าหลัก.html">หน้าหลัก</a></li>
-                    <li class="item"><a href="จองคิว.html">จองคิว</a></li>
+                    <li class="item"><a href="สั่งกาแฟ.html">สั่งกาแฟ</a></li>
                     <li class="item"><a href="ข้อมูลกาแฟ.html">ข้อมูลกาแฟ</a></li>
                     <li class="item"><a href="#">ติดต่อ</a>
                         <ul>
@@ -101,12 +111,15 @@
                             <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
                         </ul>
                     </li>
-                    <li class="item button"><a href="เข้าสู่ระบบ.html">เข้าสู่ระบบ</a></li>
-                    <li class="item button secondary"><a href="สมัครสมาชิก.html">สมัคร</a></li>
+                    <li class="item button"><a href="login.php">เข้าสู่ระบบ</a></li>
+                    <li class="item button secondary"><a href="register.php">สมัคร</a></li>
                 </ul>
             </div>
         </header>
-        <header class="header">
+        <center>
+            <img src="D:\ProjectCoffee-TopsCode\logo.png" align="top">
+        </center>
+        <center><header class="header">
             <div class="container">
                 <div class="header_area">
                     <h1>Wel com to T&C Coffee Bar</h1>
@@ -141,6 +154,10 @@
                 </div>
             </div>
         </section>
-
+        <h1>เพลงชิวๆเปิดฟังได้ทุกเมื่อ</h1>
+        <video id="right" controls="" autoplay="" name="media">
+            <source src="http://stream.pjcdn.com:9000/SuksonRadio" type="audio/mpeg">
+        </video>
+        </center>
     </body>
 </html>
