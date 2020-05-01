@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 30, 2020 at 03:55 AM
+-- Generation Time: May 01, 2020 at 11:21 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -19,227 +19,139 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `coffee`
+-- Database: `coffee2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Table structure for table `category`
 --
 
-CREATE TABLE `customers` (
-  `CustomerID` text COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerPass` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerType` enum('Member','VIP','Other') COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `CustomerTelNo` varchar(10) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `category` (
+  `c_id` int(11) NOT NULL,
+  `c_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `customers`
+-- Dumping data for table `category`
 --
 
-INSERT INTO `customers` (`CustomerID`, `CustomerPass`, `Gender`, `CustomerType`, `CustomerName`, `CustomerTelNo`) VALUES
-('', '', 'M', 'Member', '', ''),
-('', '', 'M', 'Member', '', ''),
-('', '', 'M', 'Member', '', '');
+INSERT INTO `category` (`c_id`, `c_name`) VALUES
+(1, 'IT');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Table structure for table `order_detail`
 --
 
-CREATE TABLE `member` (
-  `UserID` int(3) UNSIGNED ZEROFILL NOT NULL,
-  `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
-  `Name` varchar(100) NOT NULL,
-  `Status` enum('ADMIN','USER') NOT NULL DEFAULT 'USER'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `member`
---
-
-INSERT INTO `member` (`UserID`, `Username`, `Password`, `Name`, `Status`) VALUES
-(001, 'win', 'win123', 'Weerachai Nukitram', 'USER'),
-(002, 'chai', 'chai123', 'Surachai Sirisart', 'ADMIN');
+CREATE TABLE `order_detail` (
+  `d_id` int(10) NOT NULL,
+  `o_id` int(11) NOT NULL,
+  `p_id` int(11) NOT NULL,
+  `d_qty` int(11) NOT NULL,
+  `d_subtotal` float NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Table structure for table `order_head`
 --
 
-CREATE TABLE `products` (
-  `ProductID` int(11) NOT NULL,
-  `ProductName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Price` float NOT NULL,
-  `ProductDetail` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `products`
---
-
-INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `ProductDetail`) VALUES
-(1, 'Espresso', 50, 'ประกอบไปด้วย กาแฟล้วน ที่ไม่มีส่วนผสมของนมใดๆ ทั้งสิ้น ถูกชงโดยใช้แรงอัดไอน้ำหรือน้ำร้อนผ่านเมล็ดกาแฟคั่วที่บดละเอียด'),
-(2, 'Caffe latte', 45, 'ประกอบไปด้วย เอสเปรสโซ 1 ส่วน และนมร้อน 2-3 ส่วน อาจจะมีฟองนมด้านบนด้วยก็ได้'),
-(3, 'Cappuccino', 65, 'ประกอบด้วย เอสเปรสโซ 1/3 ส่วน ผสมกับนมร้อนผ่านไอน้ำหรือนมสตรีม 1/3 ส่วน และนมตีโฟม 1/3 ส่วน ลอยอยู่ด้านบน ในสัดส่วนเท่าๆกัน'),
-(4, 'Americano', 55, 'ประกอบด้วย เอสเปรสโซ 1 ส่วน และน้ำร้อน 1 ส่วน'),
-(5, ' Caffè Mocha', 100, 'ประกอบไปด้วย เอสเพรสโซ่ 1/3 ส่วน นมร้อน 2/3 ส่วน และช็อคโกแลต เพิ่มกิมมิคด้วยวิปปิ้งครีมด้านบน');
+CREATE TABLE `order_head` (
+  `o_id` int(10) NOT NULL,
+  `o_dttm` datetime NOT NULL,
+  `o_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `o_addr` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `o_email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `o_phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `o_qty` int(11) NOT NULL,
+  `o_total` float NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sales`
+-- Table structure for table `product`
 --
 
-CREATE TABLE `sales` (
-  `SaleID` int(11) NOT NULL,
-  `SaleDateTime` datetime NOT NULL,
-  `CustomerID` int(11) NOT NULL,
-  `StaffID` int(11) NOT NULL,
-  `GrandTotal` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sale_details`
---
-
-CREATE TABLE `sale_details` (
-  `SaleDetailID` int(11) NOT NULL,
-  `SaleID` int(11) NOT NULL,
-  `ProductID` int(11) NOT NULL,
-  `Price` float NOT NULL,
-  `Quantity` int(11) NOT NULL,
-  `Amount` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
+CREATE TABLE `product` (
+  `p_id` int(11) NOT NULL,
+  `p_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `p_detail` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `p_price` float DEFAULT NULL,
+  `p_pic` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `c_id` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Table structure for table `staffs`
+-- Dumping data for table `product`
 --
 
-CREATE TABLE `staffs` (
-  `StaffID` int(11) NOT NULL,
-  `StaffCode` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Gender` enum('M','F') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffPassword` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `StaffLevel` enum('Staff','Manager','Admin') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `staffs`
---
-
-INSERT INTO `staffs` (`StaffID`, `StaffCode`, `StaffName`, `Gender`, `StaffPassword`, `StaffLevel`) VALUES
-(147001, 'AF001', 'Topkung', 'M', 'a0123456789', 'Admin'),
-(147002, 'AF002', 'Bacon', 'M', '1120', 'Manager'),
-(147003, 'AF003', 'Coath', 'M', '123456789', 'Staff'),
-(147004, 'AF004', 'TTC', 'M', '357', 'Staff');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `product` (`p_id`, `p_name`, `p_detail`, `p_price`, `p_pic`, `c_id`) VALUES
+(3, 'Cappuccino (คาปูชิโน)', 'ประกอบด้วย เอสเปรสโซ 1/3 ส่วน ผสมกับนมร้อนผ่านไอน้ำหรือนมสตรีม 1/3 ส่วน และนมตีโฟม 1/3 ส่วน ลอยอยู่ด้านบน ในสัดส่วนเท่าๆกัน', 65, 'Cappuccino.jpg', '1'),
+(2, 'Caffè latte(ลาเต้)', 'ประกอบไปด้วย เอสเปรสโซ 1 ส่วน และนมร้อน 2-3 ส่วน อาจจะมีฟองนมด้านบนด้วยก็ได้', 45, 'Caffe latte.jpg', '1'),
+(1, 'Espresso (เอสเปรสโซ)', 'ประกอบไปด้วย กาแฟล้วน ที่ไม่มีส่วนผสมของนมใดๆ ทั้งสิ้น ถูกชงโดยใช้แรงอัดไอน้ำหรือน้ำร้อนผ่านเมล็ดกาแฟคั่วที่บดละเอียด', 50, 'Espresso.jpg', '1'),
+(4, 'Americano (อเมริกาโน่)', 'ประกอบด้วย เอสเปรสโซ 1 ส่วน และน้ำร้อน 1 ส่วน', 55, 'Americano.jpg', '1'),
+(5, 'Caffè Mocha (มอคค่า)', 'ประกอบไปด้วย เอสเพรสโซ่ 1/3 ส่วน นมร้อน 2/3 ส่วน และช็อคโกแลต เพิ่มกิมมิคด้วยวิปปิ้งครีมด้านบน', 100, 'Caffè Mocha.jpg', '1');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `member`
+-- Indexes for table `category`
 --
-ALTER TABLE `member`
-  ADD PRIMARY KEY (`UserID`),
-  ADD UNIQUE KEY `Username` (`Username`);
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`c_id`);
 
 --
--- Indexes for table `products`
+-- Indexes for table `order_detail`
 --
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`ProductID`);
+ALTER TABLE `order_detail`
+  ADD PRIMARY KEY (`d_id`);
 
 --
--- Indexes for table `sales`
+-- Indexes for table `order_head`
 --
-ALTER TABLE `sales`
-  ADD PRIMARY KEY (`SaleID`);
+ALTER TABLE `order_head`
+  ADD PRIMARY KEY (`o_id`);
 
 --
--- Indexes for table `sale_details`
+-- Indexes for table `product`
 --
-ALTER TABLE `sale_details`
-  ADD PRIMARY KEY (`SaleDetailID`);
-
---
--- Indexes for table `staffs`
---
-ALTER TABLE `staffs`
-  ADD PRIMARY KEY (`StaffID`),
-  ADD UNIQUE KEY `StaffCode` (`StaffCode`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`p_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `member`
+-- AUTO_INCREMENT for table `category`
 --
-ALTER TABLE `member`
-  MODIFY `UserID` int(3) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `category`
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT for table `order_detail`
 --
-ALTER TABLE `products`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `order_detail`
+  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `sales`
+-- AUTO_INCREMENT for table `order_head`
 --
-ALTER TABLE `sales`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `order_head`
+  MODIFY `o_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `sale_details`
+-- AUTO_INCREMENT for table `product`
 --
-ALTER TABLE `sale_details`
-  MODIFY `SaleDetailID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `staffs`
---
-ALTER TABLE `staffs`
-  MODIFY `StaffID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147005;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
