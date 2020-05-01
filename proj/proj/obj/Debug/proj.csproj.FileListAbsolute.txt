@@ -1,0 +1,5 @@
+C:\Users\minlinnz\source\repos\proj\proj\obj\Debug\proj.csprojAssemblyReference.cache
+C:\Users\minlinnz\source\repos\proj\proj\obj\Debug\proj.Form1.resources
+C:\Users\minlinnz\source\repos\proj\proj\obj\Debug\proj.Properties.Resources.resources
+C:\Users\minlinnz\source\repos\proj\proj\obj\Debug\proj.csproj.GenerateResource.cache
+C:\Users\minlinnz\source\repos\proj\proj\obj\Debug\proj.csproj.CoreCompileInputs.cache
