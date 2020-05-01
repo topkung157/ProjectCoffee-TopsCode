@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>หน้าหลัก</title>
+        <style>
+            body{
+                background-attachment:fixed;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:url(https://data.1freewallpapers.com/download/glorious-purple.jpg)
+            }
+            .nav ul{
+                list-style: none;
+                background-color: #444;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+            }
+            .nav li{
+                font-size: 1.2em;
+                line-height: 40px;
+                text-align: left;
+            }
+            .nav a{
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                padding-left: 15px;
+                border-bottom: 1px solid #888;
+                transition: .3s;
+            }
+            .nav a:hover{
+                background-color: #005f5f;
+            }
+            .nav a.active{
+                background-color: #aaa;
+                color: #444;
+                cursor: default;
+            }
+            .nav li li{
+                font-size: .8em;
+            }
+
+            /* จอ windows*/
+            @media screen and (min-width: 650px){
+                .nav li {
+                    width: 130px;
+                    border-bottom: none;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 1.4em;
+                    display: inline-block;
+                    margin-right: -4px;
+                }
+                nav a{
+                    border-bottom: none;
+                }
+                .nav > ul > li {
+                    text-align: center;
+                }
+                .nav >ul >li > a {
+                    padding-left: 0;
+                }
+                /*sub menu*/
+                .nav li ul {
+                    position: absolute;
+                    display: none;
+                    width: inherit;
+                }
+                .nav li:hover ul {
+                    display: block;
+                }
+                .nav li ul li {
+                    display: block;
+                }
+            }
+            #กรอบ{
+                border-radius: 25px;
+                padding: 10px;
+                width: 800px;
+                height: 100px;
+                background: white;
+            }
+            #right{
+                text-align: right;
+            }
+            .zzzimg{
+	            position: absolute;
+	            z-index: 2;
+	            width: 281px;
+	            top: 345px;
+	            left: 6px;
+            }
+            .right{
+                position:absolute; 
+                right:125px; 
+                top:300px; 
+                width:150px; 
+                height:100px;
+            }
+            .font{
+                font-family: 'Acme', sans-serif;
+            }
+            #ข่าว{
+                border-radius: 25px;
+                padding: 20px;
+                width: 500px;
+                height: 100px;
+                background: white;
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <ul>
+                    <li class="logo"><a href="#">Coffee</a></li>
+                    <li class="item"><a href="http://localhost/coffee/Home.html">Home</a></li>
+                    <li class="item"><a href="http://localhost/coffee/product.php">Order</a></li>
+                    <li class="item"><a href="http://localhost/coffee/DataCoffee.html">DataCoffee</a></li>
+                    <li class="item"><a href="#">ติดต่อ</a>
+                        <ul>
+                            <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
+                            <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
+                        </ul>
+                    </li>
+                    <li class="item button"><a href="login.php">เข้าสู่ระบบ</a></li>
+                    <li class="item button secondary"><a href="register.php">สมัคร</a></li>
+                </ul>
+            </div>
+        </header>
+        <center>
+            <img src="D:\ProjectCoffee-TopsCode\logo.png" align="top">
+        </center>
+        <div class="right" style="text-align: right; width:195px; height:243px; float: inherit;">
+            <script language="javascript">var cutekiWidget=1; var cutekiLeng="en"</script>
+            <script type="text/javascript" language="javascript" src="http://www.cuteki.com/widgets/calendars/cuteki-calendar_v3.js"></script>
+        </div>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTagTeamch-754360601280439%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+        width="340" height="500" style="position: absolute; right:50px; top:560px; border:none;overflow:hidden" scrolling="no" 
+        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <center>
+        <table id="ข่าว" align="top" border="10" style="top: 10px;">
+            <tr>
+                <td width="368"><div align="center"><strong>หัวเรื่อง</strong></div></td>
+                <td width="79"><div align="center"><strong>ประกาศเมื่อ </strong></div></td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+        </table>
+        </center>
+        <center><header class="header">
+            <div class="container">
+                <div class="header_area">
+                    <h1>Wel com to T&C Coffee Bar</h1>
+                    <p>Enjoy music Enjoy the smell of coffee at T&C Coffee Bar</p>
+                </div>
+            </div>
+        </header>
+        <section class="info1">
+            <div class="container">
+                <div class="info1_area">
+                    <img src="https://sites.google.com/site/coffeeimagine/_/rsrc/1447126707522/khwam-hmay-khxng-kafae/117211960.jpg?height=212&width=320" height="300px" width="300px"><br>
+                    <div class="info1_text">
+                        <h1>รู้หรือไม่</h1>
+                        <p id="กรอบ"><span style="color:black;">กาแฟ เป็นเครื่องดื่มที่ทำมาจากเมล็ดซึ่งได้จากต้นกาแฟ หรือที่มักเรียกว่า เมล็ดกาแฟคั่ว <br>
+                            ในปัจจุบันมีการปลูกกาแฟมากกว่า 70 ประเทศทั่วโลก กาแฟเขียว ซึ่งเป็นกาแฟที่ไม่ผ่านการคั่วก็เป็นอีกหนึ่งสินค้าทางการเกษตรที่มีการซื้อขายกันมากที่สุดในโลก
+                             และในปัจจุบันกาแฟได้กลายเป็นเครื่องดื่มที่ได้รับความนิยมมากที่สุดด้วย</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info2">
+            <div class="container">
+                <div class="info1_area">
+                    <img src="https://www.coffeefavour.com/wp-content/uploads/2017/01/1.jpg" height="400px" width="300px"><br>
+                    <div class="info2_text">
+                        <h1>ดื่มกาแฟช่วงไหนดีที่สุด?</h1>
+                        <p id="กรอบ"><span style="color:black;">ดื่มช่วงเวลา 09.30-11.30 น. คือเวลาเหมาะสมที่สุด เพราะคาเฟอีนจะออกฤทธิ์ได้อย่างมีประสิทธิภาพมาก<br>
+                             เพราะเป็นช่วงเวลาที่มีความสัมพันธ์กับฮอร์โมนชื่อว่า คอร์ติซอล ที่ช่วยให้ร่างกายตื่นตัว และจะเกิดมากขึ้นเมื่อมีความเครียด<br>
+                              โดยช่วงเวลาที่ร่างกายจะผลิตฮอร์โมนชนิดนี้มากๆ</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1>เพลงชิวๆเปิดฟังได้ทุกเมื่อ</h1>
+        <video id="right" controls="" autoplay="" name="media">
+            <source src="http://stream.pjcdn.com:9000/SuksonRadio" type="audio/mpeg">
+        </video>
+        </center>
+    </body>
+</html>

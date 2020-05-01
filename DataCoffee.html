@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>ProjectCoffe</title>
         <style>
             body{
@@ -83,17 +84,18 @@
                 height: 200px;
                 background: white;
             }
-            .bbb{
-                text-align: right;
-            }
-            .aa{
+            .right{
                 position:absolute; 
-                right:50px; 
-                top:400px; 
+                right:125px; 
+                top:300px; 
                 width:150px; 
                 height:100px;
             }
+            .font{
+                font-family: 'Acme', sans-serif;
+            }
         </style>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Modak&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -102,29 +104,30 @@
             <div class="nav">
                 <ul>
                     <li class="logo"><a href="#">Coffee</a></li>
-                    <li class="item"><a href="หน้าหลัก.html">หน้าหลัก</a></li>
-                    <li class="item"><a href="สั่งกาแฟ.html">สั่งกาแฟ</a></li>
-                    <li class="item"><a href="ข้อมูลกาแฟ.html">ข้อมูลกาแฟ</a></li>
+                    <li class="item"><a href="http://localhost/coffee/Home.html">Home</a></li>
+                    <li class="item"><a href="http://localhost/coffee/product.php">Order</a></li>
+                    <li class="item"><a href="http://localhost/coffee/DataCoffee.html">DataCoffee</a></li>
                     <li class="item"><a href="#">ติดต่อ</a>
                         <ul>
                             <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
                             <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
                         </ul>
                     </li>
-                    <li class="item button"><a href="เข้าสู่ระบบ.html">เข้าสู่ระบบ</a></li>
-                    <li class="item button secondary"><a href="สมัครสมาชิก.html">สมัคร</a></li>
                 </ul>
             </div>
         </header>
         <center>
         <img src="D:\ProjectCoffee-TopsCode\logo.png">
         </center>
-        <div class="aa" style="text-align: right; width:195px; height:243px; float: inherit;">
+        <div class="right" style="text-align: right; width:195px; height:243px; float: inherit;">
             <script language="javascript">var cutekiWidget=1; var cutekiLeng="en"</script>
             <script type="text/javascript" language="javascript" src="http://www.cuteki.com/widgets/calendars/cuteki-calendar_v3.js"></script>
         </div>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTagTeamch-754360601280439%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+        width="340" height="500" style="position: absolute; right:50px; top:560px; border:none;overflow:hidden" scrolling="no" 
+        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         <center>
-            <h1><span style="color: blue;">Coffee TsC</span></h1>
+            <h1><span class="font" style="color: blue;">Coffee TsC</span></h1>
             <h3>ข้อมูลกาแฟที่มีในร้าน</h3>
             <h4>1.Espresso</h4>
             <img src="https://www.nespresso.com/ncp/res/uploads/recipes/nespresso-recipes-Espresso-Macchiato-by-Nespresso.jpg" height="300px" width="300px"><br>

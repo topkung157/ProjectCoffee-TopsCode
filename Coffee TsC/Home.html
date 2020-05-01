@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>หน้าหลัก</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Coffee TsC</title>
         <style>
             body{
                 background-attachment:fixed;
@@ -9,7 +10,7 @@
             body{
                 margin: 0;
                 padding: 0;
-                background-image:url(https://i.pinimg.com/originals/c0/c4/9e/c0c49e4e644b14188f1c406543af3bf6.jpg)
+                background-image:url(https://data.1freewallpapers.com/download/glorious-purple.jpg)
             }
             .nav ul{
                 list-style: none;
@@ -93,6 +94,23 @@
 	            top: 345px;
 	            left: 6px;
             }
+            .right{
+                position:absolute; 
+                right:125px; 
+                top:300px; 
+                width:150px; 
+                height:100px;
+            }
+            .font{
+                font-family: 'Acme', sans-serif;
+            }
+            #ข่าว{
+                border-radius: 25px;
+                padding: 20px;
+                width: 500px;
+                height: 100px;
+                background: white;
+            }
         </style>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -102,22 +120,49 @@
             <div class="nav">
                 <ul>
                     <li class="logo"><a href="#">Coffee</a></li>
-                    <li class="item"><a href="หน้าหลัก.html">หน้าหลัก</a></li>
-                    <li class="item"><a href="สั่งกาแฟ.html">สั่งกาแฟ</a></li>
-                    <li class="item"><a href="ข้อมูลกาแฟ.html">ข้อมูลกาแฟ</a></li>
+                    <li class="item"><a href="http://localhost/coffee/Home.html">Home</a></li>
+                    <li class="item"><a href="http://localhost/coffee/product.php">Order</a></li>
+                    <li class="item"><a href="http://localhost/coffee/DataCoffee.html">DataCoffee</a></li>
                     <li class="item"><a href="#">ติดต่อ</a>
                         <ul>
                             <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
                             <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
                         </ul>
                     </li>
-                    <li class="item button"><a href="login.php">เข้าสู่ระบบ</a></li>
-                    <li class="item button secondary"><a href="register.php">สมัคร</a></li>
                 </ul>
             </div>
         </header>
+        <div class="right" style="text-align: right; width:195px; height:243px; float: inherit;">
+            <script language="javascript">var cutekiWidget=1; var cutekiLeng="en"</script>
+            <script type="text/javascript" language="javascript" src="http://www.cuteki.com/widgets/calendars/cuteki-calendar_v3.js"></script>
+        </div>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTagTeamch-754360601280439%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+        width="340" height="500" style="position: absolute; right:50px; top:560px; border:none;overflow:hidden" scrolling="no" 
+        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
         <center>
-            <img src="D:\ProjectCoffee-TopsCode\logo.png" align="top">
+        <img src="img/logo.png">
+        <table id="ข่าว" align="top" border="10" style="top: 10px;">
+            <tr>
+                <td width="368"><div align="center"><strong>หัวเรื่อง</strong></div></td>
+                <td width="79"><div align="center"><strong>ประกาศเมื่อ </strong></div></td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+            <tr>
+                <td><a href="#">ข่าวสารใหม่ๆ</a></td>
+                <td>00/00/00</td>
+            </tr>
+        </table>
         </center>
         <center><header class="header">
             <div class="container">
@@ -154,10 +199,10 @@
                 </div>
             </div>
         </section>
-        <h1>เพลงชิวๆเปิดฟังได้ทุกเมื่อ</h1>
-        <video id="right" controls="" autoplay="" name="media">
+        <video style="position: absolute; right:60px; top:1100px;" controls="" autoplay="" name="media">
             <source src="http://stream.pjcdn.com:9000/SuksonRadio" type="audio/mpeg">
-        </video>
+        </video><br>
+        <img src="http://dl9.glitter-graphics.net/pub/608/608289q08o3aylgm.gif"> 
         </center>
     </body>
 </html>

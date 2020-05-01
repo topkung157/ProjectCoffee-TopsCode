@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>สั่งกาแฟ</title>
-        <style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coffe TsC</title>
+<style>
             body{
                 background-attachment:fixed;
             }
@@ -96,23 +96,22 @@
         </style>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
+</head>
+ 
+<body>
+<header>
             <div class="nav">
                 <ul>
                     <li class="logo"><a href="#">Coffee</a></li>
-                    <li class="item"><a href="หน้าหลัก.html">หน้าหลัก</a></li>
-                    <li class="item"><a href="สั่งกาแฟ.html">สั่งกาแฟ</a></li>
-                    <li class="item"><a href="ข้อมูลกาแฟ.html">ข้อมูลกาแฟ</a></li>
+                    <li class="item"><a href="http://localhost/coffee/Home.html">Home</a></li>
+                    <li class="item"><a href="http://localhost/coffee/product.php">Order</a></li>
+                    <li class="item"><a href="http://localhost/coffee/DataCoffee.html">DataCoffee</a></li>
                     <li class="item"><a href="#">ติดต่อ</a>
                         <ul>
                             <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
                             <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
                         </ul>
                     </li>
-                    <li class="item button"><a href="เข้าสู่ระบบ.html">เข้าสู่ระบบ</a></li>
-                    <li class="item button secondary"><a href="สมัครสมาชิก.html">สมัคร</a></li>
                 </ul>
             </div>
         </header>
@@ -122,9 +121,29 @@
         </div>
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTagTeamch-754360601280439%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
         width="340" height="500" style="position: absolute; right:50px; top:560px; border:none;overflow:hidden" scrolling="no" 
-        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>  
-        <center>
-            <img src="D:\ProjectCoffee-TopsCode\logo.png" align="top" >
-        </center>   
-    </body>
-</html>
+        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <center><img src="img/logo.png"></center>
+<table width="600" border="1" align="center" bordercolor="#666666">
+  <tr>
+    <td width="91" align="center" bgcolor="#CCCCCC"><strong>ภาพ</strong></td>
+    <td width="200" align="center" bgcolor="#CCCCCC"><strong>กาแฟ</strong></td>
+    <td width="44" align="center" bgcolor="#CCCCCC"><strong>ราคา</strong></td>
+    <td width="100" align="center" bgcolor="#CCCCCC"><strong>รายละเอียดกาแฟ</strong></td>
+  </tr><br>
+  
+  
+  <?php
+  include("connect.inc");
+  $sql = "select * from product order by p_id";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result))
+  {
+  	echo "<tr>";
+	  echo "<td align='center'><img src='img/" . $row["p_pic"] ." ' width='100'></td>";
+	  echo "<td align='left'>" . $row["p_name"] . "</td>";
+    echo "<td align='center'>" .number_format($row["p_price"],2). "</td>";
+    echo "<td align='center'><a href='product_detail.php?p_id=$row[p_id]'>คลิก</a></td>";
+	echo "</tr>";
+  }
+  ?>
+</table>
