@@ -109,7 +109,7 @@
                     <li class="item"><a href="#">ติดต่อ</a>
                         <ul>
                             <li><a href="https://www.facebook.com/TagTeamch-754360601280439/">เพจ</a></li>
-                            <li><a href="เบอร์ติดต่อ.html">เบอร์ติดต่อ</a></li>
+                            <li><a href="#">เบอร์ติดต่อ</a></li>
                         </ul>
                     </li>
                 </ul>
